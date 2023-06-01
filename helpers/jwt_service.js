@@ -49,7 +49,7 @@ const signRefreshToken = async (userId) => {
 const verifyAccessToken = async (req, res, next) => {
   if (!req.headers["authorization"]) return next(createError.Unauthorized());
   const accessToken = req.headers["authorization"].split(" ")[1];
-  //start vertify
+  //start verify
   JWT.verify(accessToken, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
     if (err) {
       if (err.name === "JsonWebTokenError") {

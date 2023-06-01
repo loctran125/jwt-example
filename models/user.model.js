@@ -7,12 +7,12 @@ const UserSchema = new schema({
   username: {
     type: String,
     lowercase: true,
-    require: true,
+    required: true,
     unique: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   },
 });
 

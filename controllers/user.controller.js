@@ -1,5 +1,5 @@
 const createError = require("http-errors");
-//const User = require("../models/user.model");
+const User = require("../models/user.model");
 const { userValidate } = require("../helpers/validation");
 const {
   signAccessToken,
@@ -14,10 +14,9 @@ module.exports = {
     try {
       const { email, password } = req.body;
       const { error } = userValidate(req.body);
-      //console.log(error)
-      // if(!email || !password){
-      //     throw createError.BadRequest()
-      // }
+      if(!email || !password){
+          throw createError.BadRequest()
+      }
       if (error) {
         throw createError.BadRequest(error.details[0].message);
       }
