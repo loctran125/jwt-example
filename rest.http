@@ -26,17 +26,17 @@ DELETE http://localhost:3000/users/logout
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc4MTExN2VhMjZiNjgxYjI0OWZjNmIiLCJpYXQiOjE2ODU1OTA4NTMsImV4cCI6MTcxNzE0ODQ1M30.YTXZS2t-j9FhCFp-2slNS9EMiVw3e65imkZBt_79Tqk"
+    "refreshToken": "<refresh_token>"
 }
 ### Refresh Token
 POST http://localhost:3000/users/refresh-token
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc4MTExN2VhMjZiNjgxYjI0OWZjNmIiLCJpYXQiOjE2ODU1OTA4NTMsImV4cCI6MTcxNzE0ODQ1M30.YTXZS2t-j9FhCFp-2slNS9EMiVw3e65imkZBt_79Tqk"
+    "refreshToken": "<refresh_token>"
 }
 
 ### Get List User
 GET http://localhost:3000/users/lists
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc4MTExN2VhMjZiNjgxYjI0OWZjNmIiLCJpYXQiOjE2ODU1OTEwNDAsImV4cCI6MTY4NTU5MTEwMH0.1U5K16uyCAncGlpEgiP1-GVH4eH_k1tw826yyeEkuTc
+Authorization: Bearer "<access_token>"
 
